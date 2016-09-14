@@ -10,20 +10,20 @@
 							<span class="icon-bar"></span>
 						</button>
 						
-						<a class="navbar-brand" href="http://demo.themeregion.com/dailynews/index.html">
+						<a class="navbar-brand"  [routerLink]="['/']">
 							<img class="main-logo img-responsive" src="./assets/assets/logo.png" alt="">
 						</a>
 					</div> 
 					<nav id="mainmenu" class="navbar-left collapse navbar-collapse"> 
-						<a class="secondary-logo" href="http://demo.themeregion.com/dailynews/index.html">
+						<a class="secondary-logo" [routerLink]="['/']">
 							<img class="img-responsive" src="./assets/assets/logo.png" alt="">
 						</a>
 						<ul class="nav navbar-nav">                       
-							<li><a href="http://demo.themeregion.com/dailynews/listing.html">Internacional</a></li>
-							<li><a href="http://demo.themeregion.com/dailynews/listing.html">Economía</a></li>
-							<li><a href="http://demo.themeregion.com/dailynews/listing.html">Politica</a></li>
-							<li><a href="http://demo.themeregion.com/dailynews/listing.html">Espectaculos</a></li>
-							<li><a href="http://demo.themeregion.com/dailynews/listing.html">Deporte</a></li>
+							<li><a [routerLink]="['category', 'internacional']">Internacional</a></li>
+							<li><a [routerLink]="['category', 'economia']">Economía</a></li>
+							<li><a [routerLink]="['category', 'politica']">Politica</a></li>
+							<li><a [routerLink]="['category', 'espectaculos']">Espectaculos</a></li>
+							<li><a [routerLink]="['category', 'deporte']">Deporte</a></li>
 						</ul> 					
 					</nav>
 					

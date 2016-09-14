@@ -26,9 +26,9 @@ export class NewsService {
     "title" : "Las organizaciones reclaman más ayuda oficial",
     "tag" : "politica",
     "source" : "lanacion"
-} ], "http://images.clarin.com/politica/Anibal-Fernandez-tribunales-Comodoro-Py_CLAIMA20160623_0106_43.jpg"),
-    new News("2", ["Macri", "Francisco", "Audiencia"], [] , "http://images.clarin.com/politica/presidente-Macri-primera-Awada-Papa_CLAIMA20160318_0246_28.jpg"),
-    new News("3", ["cristina", "kirschner", "lazaro", "baez", "bienes", "inhibir"], [], "http://images.clarin.com/politica/SA-Cristina-Kirchner-Gustavo-Garello_CLAIMA20160818_0055_48.jpg")
+} ], "http://images.clarin.com/politica/Anibal-Fernandez-tribunales-Comodoro-Py_CLAIMA20160623_0106_43.jpg" , "politica"),
+    new News("2", ["Macri", "Francisco", "Audiencia"], [] , "http://images.clarin.com/politica/presidente-Macri-primera-Awada-Papa_CLAIMA20160318_0246_28.jpg", "politica"),
+    new News("3", ["cristina", "kirschner", "lazaro", "baez", "bienes", "inhibir"], [], "http://images.clarin.com/politica/SA-Cristina-Kirchner-Gustavo-Garello_CLAIMA20160818_0055_48.jpg","economia")
   ];
 
 
@@ -38,9 +38,12 @@ export class NewsService {
     return this.fetchedNews;
   }
 
-  getNewsById(_id : String){
-   // return _.find(this.fetchedNews, ['_id', _id]  );
+  getNewsById(_id : String) : News{
    return this.fetchedNews.find((news) => news._id == _id);
+  }
+
+  getNewsByCategory( category : String): News[]{
+    return this.fetchedNews.filter((news)=> news.category == category);
   }
 
 }
