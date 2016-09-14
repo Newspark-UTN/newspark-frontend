@@ -1,0 +1,22 @@
+<div class="col-sm-6 col-md-4">
+  <div class="post medium-post">
+    <div class="entry-header">
+      <div class="entry-thumbnail">
+        <a href="http://demo.themeregion.com/dailynews/news-details.html"><img class="img-responsive" src="{{ newsItem?.imagen }}" alt=""></a>
+      </div>
+    </div>
+    <div class="post-content">
+      <div class="entry-meta">
+        <ul class="list-inline">
+          <li class="publish-date"><a href="http://demo.themeregion.com/dailynews/listing-boxed.html#"><i class="fa fa-clock-o"></i> Jan 5, 2016 </a></li>
+          <li class="views"><a href="http://demo.themeregion.com/dailynews/listing-boxed.html#"><i class="fa fa-eye"></i>21k</a></li>
+          <li class="loves"><a href="http://demo.themeregion.com/dailynews/listing-boxed.html#"><i class="fa fa-heart-o"></i>372</a></li>
+        </ul>
+      </div>
+      <h2 class="entry-title">
+        <a [routerLink]="['news', newsItem?._id]"><span *ngFor="let concept of newsItem?.concepts">#{{ concept }} </span></a>
+      </h2>
+    </div>
+  </div>
+  <!--/post-->
+</div>

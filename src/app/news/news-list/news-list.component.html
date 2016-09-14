@@ -1,0 +1,32 @@
+<div id="news-listing" class="container-fluid">
+	<div class="section">
+		<div class="row">
+			<div class="col-sm-9">
+				<div id="site-content" class="site-content">
+					<div class="section add inner-add">
+					<h1> Tu Portal de Noticias Inteligente </h1>
+					</div>
+					<h1 class="section-title title"><a href="http://demo.themeregion.com/dailynews/listing.html">World News</a></h1>
+						<div class="section">
+							<div class="row">
+								<app-news-list-item *ngFor="let news of newsList" [news-item]="news"></app-news-list-item>
+
+							</div>
+						</div>
+						<!--/.lifestyle -->
+					
+				</div>
+				<!--/#site-content-->
+				<div class="load-more text-center">
+					<a class="btn btn-primary btn-block" href="http://demo.themeregion.com/dailynews/listing-boxed.html#">Load More News</a>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<app-most-popular-news></app-most-popular-news>
+			</div>
+		</div>
+	</div>
+	<!--/.section-->
+
+</div>
+<!--/.container-fluid-->

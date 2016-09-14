@@ -1,0 +1,63 @@
+<div class="section add inner-add">
+  <h1> Tu Portal de Noticias Inteligente </h1>
+</div>
+<div id="newsdetails" class="container-fluid">
+
+  <div class="section">
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="site-content" class="site-content">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="left-content">
+
+               <!-- <h1 class="section-title title" style="text-transform:capitalize;">{{ newsItem?.articles[0]?.tag }}</h1>-->
+                <div class="details-news">
+                  <div class="post">
+                    <div class="entry-header">
+                      <div class="row">
+                        <div class="entry-thumbnail col-md-6">
+                          <img alt="" class="img-responsive" src="{{ newsItem?.imagen }}">
+                        </div>
+
+                        <div class="col-md-6" style="vertical-align: middle;">
+                          <h1 style="margin-top: 97px;"><span *ngFor="let concept of newsItem?.concepts">#{{ concept }} </span></h1>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="post-content">
+                      <div class="entry-meta">
+                        <ul class="list-inline">
+                          <li class="posted-by"><i class="fa fa-user"></i> <a href="http://demo.themeregion.com/dailynews/news-details-boxed.html#">Adams Kev</a></li>
+                          <li class="publish-date"><a href="http://demo.themeregion.com/dailynews/news-details-boxed.html#"><i class="fa fa-clock-o"></i> Nov 15, 2016 </a></li>
+                          <li class="views"><a href="http://demo.themeregion.com/dailynews/news-details-boxed.html#"><i class="fa fa-eye"></i>21k</a></li>
+                          <li class="loves"><a href="http://demo.themeregion.com/dailynews/news-details-boxed.html#"><i class="fa fa-heart-o"></i>231</a></li>
+                          <li class="comments"><i class="fa fa-comment-o"></i><a href="http://demo.themeregion.com/dailynews/news-details-boxed.html#">172</a></li>
+                        </ul>
+                      </div>
+                      <div class="row">
+                        <div *ngFor="let article of newsItem?.articles" class="col-md-6">
+                          <app-article [article]="article"></app-article>
+
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!--/post-->
+                </div>
+                <!--/.section-->
+              </div>
+              <!--/.left-content-->
+            </div>
+          </div>
+        </div>
+        <!--/#site-content-->
+      </div>
+    </div>
+  </div>
+  <!--/.section-->
+</div>
+<!--/.container-fluid-->
