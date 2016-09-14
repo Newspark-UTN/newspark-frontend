@@ -12,13 +12,15 @@ import { NewsService } from '../../shared/news.service';
 export class NewsDetailComponent implements OnInit {
 
   private suscription: Subscription;
-  newsItem : News;
-  constructor( private activeRoute: ActivatedRoute, private newsService: NewsService ) { 
+  newsItem: News;
+  constructor(private activeRoute: ActivatedRoute, private newsService: NewsService) {
     activeRoute.params.subscribe(
-      (param : any) => {
-        this.newsItem = newsService.getNewsById(param['id'])
-        console.log("holaa");
-    }
+      (param: any) => {
+        this.newsService.getNewsById(param['id']).subscribe(
+          (data) => this.newsItem = data
+        );
+
+      }
     );
   }
 

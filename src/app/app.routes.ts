@@ -4,7 +4,7 @@ import { NewsDetailComponent, NewsListComponent } from './news';
 
 const APP_ROUTES: Routes = [
     { path: '' , component: NewsListComponent },
-    { path: 'category/:category', component: NewsListComponent }
+    { path: 'category/:category', component: NewsListComponent },
     { path: 'news/:id', component: NewsDetailComponent }
 ]
 

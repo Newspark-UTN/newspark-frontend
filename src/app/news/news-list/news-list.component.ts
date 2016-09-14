@@ -9,7 +9,7 @@ import { NewsService } from '../../shared/news.service';
   styles: []
 })
 export class NewsListComponent implements OnInit {
-  newsList : News[];
+  newsList : News[] = [];
   category : String = null;
 
   constructor( private newsService: NewsService , private activeRoute: ActivatedRoute ) {
@@ -23,14 +23,22 @@ export class NewsListComponent implements OnInit {
         this.loadNews();
       }
     )
+    this.loadNews();
+    this.newsList = [];
 
   }
 
   loadNews(){
     if(this.category){
-      this.newsList = this.newsService.getNewsByCategory(this.category);
+      this.newsService.getNewsByCategory(this.category).subscribe(
+        (data) => {
+          this.newsList = data
+        } 
+      );
     }else{
-      this.newsList = this.newsService.getNews();
+      this.newsService.getNews().subscribe(
+        (data) => this.newsList = data
+      );
     }
      
   }
