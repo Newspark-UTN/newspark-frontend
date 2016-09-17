@@ -15,13 +15,14 @@
                 <div class="details-news">
                   <div class="post">
                     <div class="entry-header">
-                      <div class="row">
-                        <div class="entry-thumbnail col-md-6">
-                          <img alt="" class="img-responsive" src="{{ newsItem?.imagen }}">
+                      <div class="row container">
+                        <div *ngIf="newsItem?.image" class="entry-thumbnail col-md-6">
+                          <img alt="" class="img-responsive" src="{{ newsItem?.image }}">
                         </div>
+                        <div *ngIf="!newsItem?.image" class="col-md-2"></div>
 
-                        <div class="col-md-6" style="vertical-align: middle;">
-                          <h1 style="margin-top: 97px;"><span *ngFor="let concept of newsItem?.concepts">#{{ concept }} </span></h1>
+                        <div [ngClass]="{'col-md-6': newsItem?.image, 'col-md-8': !newsItem?.image}" style="vertical-align: middle;">
+                          <h1 style="margin-top: 50px; text-align: center;"><span *ngFor="let concept of newsItem?.concepts">#{{ concept }} </span></h1>
                         </div>
                       </div>
 
@@ -29,11 +30,10 @@
                     <div class="post-content">
                       <div class="entry-meta">
                         <ul class="list-inline">
-                          <li class="posted-by"><i class="fa fa-user"></i> <a href="http://demo.themeregion.com/dailynews/news-details-boxed.html#">Adams Kev</a></li>
-                          <li class="publish-date"><a href="http://demo.themeregion.com/dailynews/news-details-boxed.html#"><i class="fa fa-clock-o"></i> Nov 15, 2016 </a></li>
-                          <li class="views"><a href="http://demo.themeregion.com/dailynews/news-details-boxed.html#"><i class="fa fa-eye"></i>21k</a></li>
-                          <li class="loves"><a href="http://demo.themeregion.com/dailynews/news-details-boxed.html#"><i class="fa fa-heart-o"></i>231</a></li>
-                          <li class="comments"><i class="fa fa-comment-o"></i><a href="http://demo.themeregion.com/dailynews/news-details-boxed.html#">172</a></li>
+                          <li class="publish-date"><a ><i class="fa fa-clock-o"></i> Nov 15, 2016 </a></li>
+                          <li class="views"><a><i class="fa fa-eye"></i>{{newsItem?.viewsCount }}</a></li>
+                          <li class="loves"><a><i class="fa fa-newspaper-o"></i>{{ newsItem?.articles.length }}</a></li>
+
                         </ul>
                       </div>
                       <div class="row">
