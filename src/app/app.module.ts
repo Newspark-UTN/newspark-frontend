@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
+import { MasonryModule } from '../../node_modules/angular2-masonry';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -32,7 +33,8 @@ import { NewsService } from './shared/news.service';
     HttpModule,
     JsonpModule,
     RouterModule,
-    routing
+    routing,
+    MasonryModule
   ],
   providers: [ appRoutingProviders, NewsService ],
   bootstrap: [AppComponent]

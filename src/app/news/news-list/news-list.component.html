@@ -8,10 +8,13 @@
 					</div>
 					<h1 class="section-title title" *ngIf="category"><a href="http://demo.themeregion.com/dailynews/listing.html">{{ category }}</a></h1>
 						<div class="section">
-							<div class="row">
-								<app-news-list-item *ngFor="let news of newsList" [news-item]="news"></app-news-list-item>
-
+							<div class="row" masonry [options]="options" [useImagesLoaded]="false" [options]="options">
+						
+									<app-news-list-item  *ngFor="let news of newsList" [news-item]="news"></app-news-list-item>
+							
+	
 							</div>
+							
 						</div>
 						<!--/.lifestyle -->
 					

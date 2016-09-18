@@ -11,7 +11,7 @@ import 'rxjs/Rx';
 export class NewsService {
 
   fetchedNews: News[];
-  baseUrl: string = "http://localhost:8080";
+  baseUrl: string = "http://172.99.65.178:8080";
 
   constructor(private http: Http, private jsonp : Jsonp) { }
 

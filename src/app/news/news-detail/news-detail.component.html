@@ -11,7 +11,7 @@
             <div class="col-sm-12">
               <div class="left-content">
 
-               <!-- <h1 class="section-title title" style="text-transform:capitalize;">{{ newsItem?.articles[0]?.tag }}</h1>-->
+                <!-- <h1 class="section-title title" style="text-transform:capitalize;">{{ newsItem?.articles[0]?.tag }}</h1>-->
                 <div class="details-news">
                   <div class="post">
                     <div class="entry-header">
@@ -30,17 +30,15 @@
                     <div class="post-content">
                       <div class="entry-meta">
                         <ul class="list-inline">
-                          <li class="publish-date"><a ><i class="fa fa-clock-o"></i> Nov 15, 2016 </a></li>
+                          <li class="publish-date"><a><i class="fa fa-clock-o"></i> Nov 15, 2016 </a></li>
                           <li class="views"><a><i class="fa fa-eye"></i>{{newsItem?.viewsCount }}</a></li>
                           <li class="loves"><a><i class="fa fa-newspaper-o"></i>{{ newsItem?.articles.length }}</a></li>
 
                         </ul>
                       </div>
-                      <div class="row">
-                        <div *ngFor="let article of newsItem?.articles" class="col-md-6">
+                      <div masonry [useImagesLoaded]="false" class="row">
+                        <div *ngFor="let article of newsItem?.articles" masonry-brick class="col-md-6">
                           <app-article [article]="article"></app-article>
-
-
                         </div>
                       </div>
 

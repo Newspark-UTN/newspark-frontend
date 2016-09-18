@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { News } from '../../shared/news.class';
 import { NewsService } from '../../shared/news.service';
+import { MasonryOptions } from 'angular2-masonry';
 
 @Component({
   selector: 'app-news-list',
@@ -10,7 +11,11 @@ import { NewsService } from '../../shared/news.service';
 })
 export class NewsListComponent implements OnInit {
   newsList : News[] = [];
-  category : String = null;
+  category : string = null;
+  // Options
+  options: MasonryOptions = {
+    transitionDuration: '1s'
+  }
 
   constructor( private newsService: NewsService , private activeRoute: ActivatedRoute ) {
    
