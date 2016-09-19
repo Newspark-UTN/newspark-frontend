@@ -23,6 +23,8 @@
 
                         <div [ngClass]="{'col-md-6': newsItem?.image, 'col-md-8': !newsItem?.image}" style="vertical-align: middle;">
                           <h1 style="margin-top: 50px; text-align: center;"><span *ngFor="let concept of newsItem?.concepts">#{{ concept }} </span></h1>
+                          <div class="row" style="margin-top:25px; text-align:center;">                          <div class="addthis_inline_share_toolbox"></div>
+</div>
                         </div>
                       </div>
 
@@ -31,8 +33,8 @@
                       <div class="entry-meta">
                         <ul class="list-inline">
                           <li class="publish-date"><a><i class="fa fa-clock-o"></i> Nov 15, 2016 </a></li>
-                          <li class="views"><a><i class="fa fa-eye"></i>{{newsItem?.viewsCount }}</a></li>
-                          <li class="loves"><a><i class="fa fa-newspaper-o"></i>{{ newsItem?.articles.length }}</a></li>
+                          <li class="views"><a><i class="fa fa-eye"></i>{{newsItem?.viewsCount }} visitas</a></li>
+                          <li class="loves"><a><i class="fa fa-newspaper-o"></i>{{ newsItem?.articles.length }} articulos</a></li>
 
                         </ul>
                       </div>
@@ -40,6 +42,14 @@
                         <div *ngFor="let article of newsItem?.articles" masonry-brick class="col-md-6">
                           <app-article [article]="article"></app-article>
                         </div>
+                      </div>
+                      <div class="row" style="margin-bottom:25px;">
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                          <div class="addthis_inline_share_toolbox"></div>
+                      </div>
+                      <div class="row">
+                        <div id="disqus_thread"></div>
+                          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                       </div>
 
                     </div>

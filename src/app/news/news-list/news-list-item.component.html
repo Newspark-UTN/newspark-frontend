@@ -2,9 +2,9 @@
   <div class="post medium-post">
     <div class="entry-header">
       <div class="entry-thumbnail">
-        <a>
+        <a [routerLink]="['/news', newsItem?._id]">
           <img  *ngIf="newsItem?.image" class="img-responsive" src="{{ newsItem?.image }}" alt="">
-        <img *ngIf="!newsItem?.image" class="img-responsive" src="/assets/images/img_newspark.jpg" alt="">
+          <img *ngIf="!newsItem?.image" class="img-responsive" src="/assets/images/img_newspark.jpg" alt="">
         </a>
       </div>
     </div>
