@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit, Input } from '@angular/core';
 import { News } from '../../shared/news.class';
 
@@ -14,10 +15,15 @@ import { News } from '../../shared/news.class';
 
 export class NewsListItemComponent implements OnInit {
   @Input("news-item") newsItem: News;
-
-  constructor() { }
+  category: string = null;
+  constructor(private activeRoute: ActivatedRoute) { }
 
   ngOnInit() {
+       this.activeRoute.params.subscribe(
+      (params) => {
+        this.category = params['category'] || null;
+      }
+    )
   }
 
 }
