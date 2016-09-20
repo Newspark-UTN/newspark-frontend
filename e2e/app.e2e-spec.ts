@@ -1,10 +1,10 @@
-import { NewsparkFrontendPage } from './app.po';
+import { MigrationProjectPage } from './app.po';
 
-describe('newspark-frontend App', function() {
-  let page: NewsparkFrontendPage;
+describe('migration-project App', function() {
+  let page: MigrationProjectPage;
 
   beforeEach(() => {
-    page = new NewsparkFrontendPage();
+    page = new MigrationProjectPage();
   });
 
   it('should display message saying app works', () => {
