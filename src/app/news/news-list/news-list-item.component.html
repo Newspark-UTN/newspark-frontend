@@ -1,4 +1,4 @@
-<div class="post medium-post" [ngClass]="['news-category-'+ (newsItem?.category || 'default')]">
+<div class="post medium-post" [ngClass]="['post-category-'+ (newsItem?.category || 'default')]">
   <div class="entry-header">
     <div class="entry-thumbnail">
       <a [routerLink]="['/news', newsItem?._id]">
@@ -7,8 +7,10 @@
       </a>
     </div>
   </div>
+  <div class="catagory">
+    <span class="label">{{newsItem?.category}}</span>
+  </div>
   <div class="post-content">
-    <div *ngIf="!category" class="catagory"><a href="#">{{newsItem?.category}}</a></div>
     <div class="entry-meta">
       <ul class="list-inline">
         <li class="publish-date"><a><i class="fa fa-clock-o"></i> Jan 5, 2016 </a></li>
