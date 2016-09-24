@@ -14,7 +14,8 @@ export class NewsListComponent implements OnInit {
   category : string = null;
   // Options
   options: MasonryOptions = {
-    transitionDuration: '1s'
+    transitionDuration: '1s',
+    resize: true
   }
 
   constructor( private newsService: NewsService , private activeRoute: ActivatedRoute ) {

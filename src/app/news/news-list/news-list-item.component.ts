@@ -8,7 +8,7 @@ import { News } from '../../shared/news.class';
   styles: [`
     .post{
       padding-top:0px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
   `]
 })

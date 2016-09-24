@@ -10,7 +10,9 @@
 						<div class="section">
 							<div class="row" masonry [options]="options" [useImagesLoaded]="false" [options]="options">
 						
-									<app-news-list-item  *ngFor="let news of newsList" [news-item]="news"></app-news-list-item>
+									<div masonry-brick *ngFor="let news of newsList" class="col-md-4 col-sm-6 col-xs-12">
+										<app-news-list-item  [news-item]="news"></app-news-list-item>
+									</div>
 							
 	
 							</div>
