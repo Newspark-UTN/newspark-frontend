@@ -876,20 +876,19 @@ img.mfp-img {
 	color:#fff;
 }
 
-.catagory {
-	position:absolute;
-	top:20px;
-	right:20px;
-	z-index:2;
+.post .catagory {
+	position:relative;
+	display: block;
+	text-align: right;
+	border-top: 3px solid;
 }
 
-.catagory a{
+.post .catagory span{
 	color: #fff;
-	display: block;
-	padding: 3px 12px;
-	font-size: 12px;
+	display: inline-block;
 	text-transform: uppercase;
-	background-color:#ed1c24;
+	font-size: 100%;
+	border-radius: 0;
 }
 
 .feature-post img {
@@ -1010,7 +1009,7 @@ img.mfp-img {
 }
 
 .post-content {
-	padding:30px;
+	padding: 0 30px 5px;
 }
 
 .post-content i {
@@ -2082,8 +2081,62 @@ span.badge {
 }
 
 
+/*==============================
+===== Posts Customization ======
+================================*/
+/* Internacionales */
+.post-category-internacionales.post .catagory {
+	border-color: #bf1e2e;
+}
+
+.post-category-internacionales.post .catagory span{
+	background-color: #bf1e2e;
+}
+
+/* Economia */
+.post-category-economia.post .catagory {
+	border-color: #1a77bc;
+}
+
+.post-category-economia.post .catagory span{
+	background-color: #1a77bc;
+}
 
 
+/* Politica */
+.post-category-politica.post .catagory {
+	border-color: #f0712c;
+}
+
+.post-category-politica.post .catagory span{
+	background-color: #f0712c;
+}
 
 
+/* Sociedad */
+.post-category-sociedad.post .catagory {
+	border-color: #fcb040;
+}
 
+.post-category-sociedad.post .catagory span{
+	background-color: #fcb040;
+}
+
+/* Espectaculos */
+.post-category-espectaculos.post .catagory {
+	border-color: #912690;
+}
+
+.post-category-espectaculos.post .catagory span{
+	background-color: #912690;
+}
+
+
+/* Deportes */
+.post-category-deportes.post .catagory {
+	border-color: #45a823;
+}
+
+.post-category-deportes.post .catagory span{
+	background-color: #45a823;
+}
