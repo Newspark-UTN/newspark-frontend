@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { MasonryModule } from '../../node_modules/angular2-masonry';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -36,7 +37,7 @@ import { NewsService } from './shared/news.service';
     routing,
     MasonryModule
   ],
-  providers: [ appRoutingProviders, NewsService ],
+  providers: [ appRoutingProviders, NewsService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

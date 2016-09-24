@@ -1,4 +1,4 @@
-<div class="section add inner-add">
+<div class="section add inner-add" style="margin:0;">
   <h1> Tu Portal de Noticias Inteligente </h1>
 </div>
 <div id="newsdetails" class="container-fluid">
@@ -10,35 +10,36 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="left-content">
-
-                <!-- <h1 class="section-title title" style="text-transform:capitalize;">{{ newsItem?.articles[0]?.tag }}</h1>-->
                 <div class="details-news">
-                  <div class="post">
-                     <div class="catagory" style="right:30px"><a href="#">{{newsItem?.category}}</a></div>
-                    <div class="entry-header">
-                      <div class="row container">
-                        <div *ngIf="newsItem?.image" class="entry-thumbnail col-md-6">
-                          <img alt="" class="img-responsive" src="{{ newsItem?.image }}">
-                        </div>
-                        <div *ngIf="!newsItem?.image" class="col-md-2"></div>
+                  <div class="post" style="padding-top: 0;" [ngClass]="['post-category-'+ (newsItem?.category || 'default')]">
 
-                        <div [ngClass]="{'col-md-6': newsItem?.image, 'col-md-8': !newsItem?.image}" style="vertical-align: middle;">
-                          <h1 style="margin-top: 50px; text-align: center;"><span *ngFor="let concept of newsItem?.concepts">#{{ concept }} </span></h1>
-                          <div class="row" style="margin-top:25px; text-align:center;">                          <div class="addthis_inline_share_toolbox"></div>
-</div>
+                    <h1 style="text-align: center;"><span *ngFor="let concept of newsItem?.concepts">#{{ concept }} </span></h1>
+
+                    <div class="entry-header">
+                      <div class="row">
+                        <div *ngIf="newsItem?.image" class="entry-thumbnail col-xs-12">
+                          <img alt="" style="max-height: 50vh; width: auto; margin: 0 auto;" class="img-responsive" src="{{ newsItem?.image }}">
                         </div>
                       </div>
 
                     </div>
-                    <div class="post-content">
-                      <div class="entry-meta">
-                        <ul class="list-inline">
+                    <div class="container entry-meta">
+                      <div class="col-xs-12 col-sm-6" style="min-height: 37px; line-height: 32px;">
+                        <ul class="list-inline" style="text-align: right;">
                           <li class="publish-date"><a><i class="fa fa-clock-o"></i> Nov 15, 2016 </a></li>
-                          <li class="views"><a><i class="fa fa-eye"></i>{{newsItem?.viewsCount }} visitas</a></li>
-                          <li class="loves"><a><i class="fa fa-newspaper-o"></i>{{ newsItem?.articles.length }} articulos</a></li>
-
+                          <li class="views"><a><i class="fa fa-eye"></i> {{newsItem?.viewsCount }} visitas</a></li>
+                          <li class="loves"><a><i class="fa fa-newspaper-o"></i> {{ newsItem?.articles.length }} artículos</a></li>
                         </ul>
                       </div>
+                      <div class="col-xs-12 col-sm-6" style="">
+                        <div class="addthis_inline_share_toolbox"></div>
+                      </div>
+                    </div>
+
+                    <div class="catagory">
+                      <span class="label">{{newsItem?.category}}</span>
+                    </div>
+                    <div class="post-content">
                       <div masonry [useImagesLoaded]="false" class="row">
                         <div *ngFor="let article of newsItem?.articles" masonry-brick class="col-md-6">
                           <app-article [article]="article"></app-article>

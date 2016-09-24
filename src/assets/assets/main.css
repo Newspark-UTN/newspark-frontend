@@ -1810,7 +1810,7 @@ img.mfp-img {
 }
 
 .details-news .entry-meta {
-	margin-bottom:25px;
+	margin-bottom:5px;
 	margin-top:10px;
 }
 
@@ -1835,7 +1835,7 @@ img.mfp-img {
 
 #newsdetails, 
 #news-listing {
-	margin-top:50px;
+	margin-top: 0px;
 }
 
 iframe {
@@ -2056,7 +2056,6 @@ iframe {
 /* index Box layout */
 
 .box-layout {
-	background-image:url(../images/others/box-bg.png);
 	background-repeat:repeat;
 }
 

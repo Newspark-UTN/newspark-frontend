@@ -3,8 +3,8 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div id="site-content" class="site-content">
-					<div class="section add inner-add">
-					<h1> Tu Portal de Noticias Inteligente </h1>
+					<div class="section add inner-add" style="margin: 0;">
+						<h1> Tu Portal de Noticias Inteligente </h1>
 					</div>
 					<h1 class="section-title title" *ngIf="category"><a>{{ category }}</a></h1>
 						<div class="section">
@@ -13,8 +13,6 @@
 									<div masonry-brick *ngFor="let news of newsList" class="col-md-4 col-sm-6 col-xs-12">
 										<app-news-list-item  [news-item]="news"></app-news-list-item>
 									</div>
-							
-	
 							</div>
 							
 						</div>
