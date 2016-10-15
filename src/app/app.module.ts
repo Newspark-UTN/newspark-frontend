@@ -16,6 +16,7 @@ import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { routing, appRoutingProviders } from './app.routes';
 import { ArticleComponent } from './news/news-detail/article.component';
 import { NewsService } from './shared/news.service';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { NewsService } from './shared/news.service';
     MostPopularNewsComponent,
     NewsListItemComponent,
     NewsDetailComponent,
-    ArticleComponent
+    ArticleComponent, LoaderComponent
   ],
   imports: [
     BrowserModule,

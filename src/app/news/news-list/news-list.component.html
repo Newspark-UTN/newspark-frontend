@@ -3,21 +3,24 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div id="site-content" class="site-content">
-					<div class="section add inner-add" style="margin: 0;">
+					<div class="section add inner-add">
 						<h1> Tu Portal de Noticias Inteligente </h1>
+						<h1 class="section-title title" *ngIf="category && gridReady"><a>{{ category }}</a></h1>
+
 					</div>
-					<h1 class="section-title title" *ngIf="category"><a>{{ category }}</a></h1>
-						<div class="section">
-							<div class="row" masonry [options]="options" [useImagesLoaded]="false" [options]="options">
-						
-									<div masonry-brick *ngFor="let news of newsList" class="col-md-4 col-sm-6 col-xs-12">
-										<app-news-list-item  [news-item]="news"></app-news-list-item>
-									</div>
+					<div class="section">
+						<app-loader *ngIf="!gridReady"></app-loader>
+
+						<div class="row masonry-grid " masonry [options]="options" [useImagesLoaded]="true" (layoutComplete)="layoutReady()" [ngClass]="{ show : gridReady }">
+
+							<div masonry-brick *ngFor="let news of newsList" class="col-md-4 col-sm-6 col-xs-12">
+								<app-news-list-item [news-item]="news"></app-news-list-item>
 							</div>
-							
 						</div>
-						<!--/.lifestyle -->
-					
+
+					</div>
+					<!--/.lifestyle -->
+
 				</div>
 				<!--/#site-content-->
 				<!--<div class="load-more text-center">

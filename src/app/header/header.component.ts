@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class HeaderComponent implements OnInit {
-
+  @ViewChild('navbar') navbar: ElementRef;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  closeNavbar() {
+    this.navbar.nativeElement.classList.remove("in");
   }
 
 }

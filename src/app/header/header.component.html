@@ -1,35 +1,34 @@
-
 <header id="navigation">
-			<div class="navbar" role="banner">		
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<div class="navbar" role="banner">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						
-						<a class="navbar-brand"  [routerLink]="['/']">
-							<img class="main-logo img-responsive" src="./assets/images/img-logo.png" alt="">
-						</a>
-					</div> 
-					<nav id="mainmenu" class="navbar-left collapse navbar-collapse"> 
-						<a class="secondary-logo" [routerLink]="['/']">
-							<img class="img-responsive" src="./assets/assets/logo.png" alt="">
-						</a>
-						<ul class="nav navbar-nav">                       
-							<li><a [routerLink]="['category', 'internacionales']">Internacionales</a></li>
-							<li><a [routerLink]="['category', 'economia']">Economía</a></li>
-							<li><a [routerLink]="['category', 'politica']">Politica</a></li>
-							<li><a [routerLink]="['category', 'sociedad']">Sociedad</a></li>
-							<li><a [routerLink]="['category', 'espectaculos']">Espectaculos</a></li>
-							<li><a [routerLink]="['category', 'deportes']">Deportes</a></li>
-						</ul> 					
-					</nav>
-					
-					<div class="searchNlogin">
-						<!--<ul>
+
+				<a class="navbar-brand" [routerLink]="['/']">
+					<img class="main-logo img-responsive" src="./assets/images/img-logo.png" alt="">
+				</a>
+			</div>
+			<nav #navbar id="mainmenu" class="navbar-left collapse navbar-collapse">
+				<a class="secondary-logo" [routerLink]="['/']">
+					<img class="img-responsive" src="./assets/assets/logo.png" alt="">
+				</a>
+				<ul class="nav navbar-nav">
+					<li><a [routerLink]="['category', 'internacionales']" (click)="closeNavbar()">Internacionales</a></li>
+					<li><a [routerLink]="['category', 'economia']" (click)="closeNavbar()">Economía</a></li>
+					<li><a [routerLink]="['category', 'politica']" (click)="closeNavbar()">Politica</a></li>
+					<li><a [routerLink]="['category', 'sociedad']" (click)="closeNavbar()">Sociedad</a></li>
+					<li><a [routerLink]="['category', 'espectaculos']" (click)="closeNavbar()">Espectaculos</a></li>
+					<li><a [routerLink]="['category', 'deportes']" (click)="closeNavbar()">Deportes</a></li>
+				</ul>
+			</nav>
+
+			<div class="searchNlogin">
+				<!--<ul>
 							<li class="search-icon"><i class="fa fa-search"></i></li>
 							<li class="dropdown user-panel"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
 								<div class="dropdown-menu top-user-section">
@@ -59,8 +58,10 @@
 							<form>
 								<input type="text" class="search-form" autocomplete="off" placeholder="Type &amp; Press Enter">
 							</form>
-						</div> <!--/.search--> 
-					</div><!--.searchNlogin -->
-				</div>
+						</div> <!--/.search-->
 			</div>
-		</header><!--/#navigation--> 
+			<!--.searchNlogin -->
+		</div>
+	</div>
+</header>
+<!--/#navigation-->
