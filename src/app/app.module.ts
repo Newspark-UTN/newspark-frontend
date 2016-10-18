@@ -13,6 +13,7 @@ import { NewsListComponent } from './news/news-list/news-list.component';
 import { MostPopularNewsComponent } from './news/most-popular-news.component';
 import { NewsListItemComponent } from './news/news-list/news-list-item.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
+import { ArticlesListComponent } from './news/news-detail/articles-list.component';
 import { routing, appRoutingProviders } from './app.routes';
 import { ArticleComponent } from './news/news-detail/article.component';
 import { NewsService } from './shared/news.service';
@@ -27,6 +28,7 @@ import { LoaderComponent } from './shared/loader/loader.component';
     MostPopularNewsComponent,
     NewsListItemComponent,
     NewsDetailComponent,
+    ArticlesListComponent,
     ArticleComponent, LoaderComponent
   ],
   imports: [

@@ -1,0 +1,5 @@
+<div masonry [useImagesLoaded]="false" class="row">
+    <div *ngFor="let article of newsItem?.articles" masonry-brick class="col-md-6">
+        <app-article [article]="article"></app-article>
+    </div>
+</div>
