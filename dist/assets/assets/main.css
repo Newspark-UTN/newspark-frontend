@@ -2191,7 +2191,11 @@ span.badge {
 }
 
 .post-content .card .card-content {
-    padding: 10px 30px 0;
+    padding: 30px;
+}
+
+.post-content .card.closed .card-content {
+    padding-bottom: 0px;
 }
 
 .post-content .card .read-more {
@@ -2213,7 +2217,7 @@ span.badge {
 }
 
 .post-content .card .card-content .entry-header h2 {
-	margin: 0;
+	margin: 10px 0;
 	text-align: justify;
 }
 
@@ -2232,4 +2236,25 @@ span.badge {
 
 .post-content .card.closed .card-content .paragraph.paragraph-1 {
 	display: block;
+}
+
+form.contact-form {
+	max-width: 500px;
+	background: white;
+	padding: 30px;
+	margin: 0 auto;
+}
+
+form.contact-form .row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+form.contact-form .contact-title {
+	margin: 0 15px 10px;
+}
+
+form.contact-form h2 {
+    margin: 0;
+    margin-bottom: 10px;
 }
