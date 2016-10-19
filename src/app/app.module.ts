@@ -17,6 +17,7 @@ import { ArticlesListComponent } from './news/news-detail/articles-list.componen
 import { CardComponent } from './news/news-detail/card.component';
 import { CardsListComponent } from './news/news-detail/cards-list.component';
 import { SourceImageComponent } from './news/news-detail/source-image.component';
+import { ContactComponent } from './news/contact/contact.component';
 import { routing, appRoutingProviders } from './app.routes';
 import { ArticleComponent } from './news/news-detail/article.component';
 import { NewsService } from './shared/news.service';
@@ -35,6 +36,7 @@ import { LoaderComponent } from './shared/loader/loader.component';
     CardsListComponent,
     CardComponent,
     SourceImageComponent,
+    ContactComponent,
     ArticleComponent, LoaderComponent
   ],
   imports: [
