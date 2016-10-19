@@ -1150,7 +1150,7 @@ img.mfp-img {
 }
 
 .entry-content {
-	color:#888;
+	color:#000;
 	font-size:14px;
 	font-weight: 300;
 }
@@ -1224,7 +1224,7 @@ img.mfp-img {
 
 .post img, 
 #photo-gallery .item img {
-	width:100%;
+	width: 100%;
 }
 
 
@@ -2174,4 +2174,62 @@ span.badge {
 
 #mainmenu li.category-deportes:hover{
 	background-color: #45a823;
+}
+
+/*==============================
+===== Cards Customization ======
+================================*/
+
+.post-content .card {
+    margin: 25px 20px;
+    border: 1px solid #e1e1e1;
+    color: #000;
+}
+
+.post-content .card:hover {
+    border-color: #ccc;
+}
+
+.post-content .card .card-content {
+    padding: 10px 30px 0;
+}
+
+.post-content .card .read-more {
+    border-top: 1px solid;
+    border-color: inherit;
+    background: #e1e1e1;
+    text-align: center;
+    padding: 10px 0 5px;
+}
+
+.post-content .card .card-content .entry-header {
+	margin-bottom: 10px;
+}
+
+.post-content .card .card-content .entry-header img {
+	width: 200px;
+	display: block;
+	margin: 0 auto;
+}
+
+.post-content .card .card-content .entry-header h2 {
+	margin: 0;
+	text-align: justify;
+}
+
+
+.post-content .card .read-more:hover {
+    background: #ccc;
+}
+
+.post-content .card.closed:hover .read-more {
+    background: #ccc;
+}
+
+.post-content .card.closed .card-content .paragraph {
+	display: none;
+}
+
+.post-content .card.closed .card-content .paragraph.paragraph-1 {
+	display: block;
 }

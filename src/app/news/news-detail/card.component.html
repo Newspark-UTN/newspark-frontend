@@ -1,0 +1,19 @@
+<div class="card row" [ngClass]="{opened: opened, closed: !opened}">
+  <div class="card-content" (click)="clickCard()">
+    <div class="entry-header row">
+      <app-source-image class="col-xs-12 col-md-3" [source]="article?.source"></app-source-image>
+      <h2 class="col-xs-12 col-md-9">
+          {{ article?.title }}
+      </h2>
+    </div>
+    <div class="entry-content">
+        <p *ngFor="let paragraph of paragraphs(); let i = index;"
+          class="paragraph paragraph-{{ i + 1 }}">
+            {{ paragraph }}
+        </p>
+    </div>
+  </div>
+  <div class="read-more" (click)="clickReadMore()">
+    <span>LEER {{ opened ?  'MENOS' : 'MÁS' }}</span>
+  </div>
+</div>

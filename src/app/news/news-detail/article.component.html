@@ -1,9 +1,4 @@
-<div [ngSwitch]="article?.source">
-	<img *ngSwitchCase="'clarin'" height="32" width="auto" style="margin-top:10px; width:auto;" src="./assets/images/clarin.png">
-	<img *ngSwitchCase="'ambito'" style="width:200px;" src="./assets/images/ambito.jpg">
-	<img *ngSwitchCase="'lanacion'" height="25px" style="width:auto; margin-top:25px;" src="./assets/images/lanacion.png">
-	<img *ngSwitchCase="'telam'" height="50" style="width:auto; margin-top:10px;" src="./assets/images/telam.png">
-</div>
+<app-source-image [source]="article?.source"></app-source-image>
 <h2 class="entry-title">
 	{{ article?.title }}
 </h2>

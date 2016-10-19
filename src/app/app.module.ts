@@ -14,6 +14,9 @@ import { MostPopularNewsComponent } from './news/most-popular-news.component';
 import { NewsListItemComponent } from './news/news-list/news-list-item.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { ArticlesListComponent } from './news/news-detail/articles-list.component';
+import { CardComponent } from './news/news-detail/card.component';
+import { CardsListComponent } from './news/news-detail/cards-list.component';
+import { SourceImageComponent } from './news/news-detail/source-image.component';
 import { routing, appRoutingProviders } from './app.routes';
 import { ArticleComponent } from './news/news-detail/article.component';
 import { NewsService } from './shared/news.service';
@@ -29,6 +32,9 @@ import { LoaderComponent } from './shared/loader/loader.component';
     NewsListItemComponent,
     NewsDetailComponent,
     ArticlesListComponent,
+    CardsListComponent,
+    CardComponent,
+    SourceImageComponent,
     ArticleComponent, LoaderComponent
   ],
   imports: [
