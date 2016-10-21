@@ -1,55 +1,71 @@
 <div class="section add inner-add" style="margin:0;">
-  <h1> Tu Portal de Noticias Inteligente </h1>
+	<h1> Tu Portal de Noticias Inteligente </h1>
 </div>
 <div id="newsdetails" class="container">
 
-  <div class="section">
-    <div class="row">
-      <div class="col-sm-12">
-        <div id="site-content" class="site-content">
-          <form class="contact-form" #f="ngForm" (ngSubmit)="onSubmit(f.value)">
-            <div class="controls">
-                <div class="row contact-title">
-                  <h2>¿Nos estamos olvidando de algo?</h2>
-                  <p>Si hay una noticia que creas relevante que agreguemos, envianos los links a los distintos diarios y lo revisaremos para agregarlos!</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="form_name">Nombre *</label>
-                            <input id="form_name" type="text" name="name" ngModel class="form-control" placeholder="Introduzca su nombre *" required="required">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="form_email">Email *</label>
-                            <input id="form_email" type="email" name="email" ngModel class="form-control" placeholder="Introduzca su email *" required="required" data-error="Valid email is required.">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="form_message">Message *</label>
-                            <textarea id="form_message" name="message" ngModel class="form-control" placeholder="Mensaje *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <input type="submit" class="btn btn-success btn-send" value="Enviar">
-                    </div>
-                </div>
-            </div>
-          </form>
-        </div>
-        <!--/#site-content-->
-      </div>
-    </div>
-  </div>
-  <!--/.section-->
+	<div class="section">
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="site-content" class="site-content">
+					<form class="contact-form" #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+						<div *ngIf="!mensajeEnviado" class="controls">
+							<div class="row contact-title">
+								<h2>¿Nos estamos olvidando de algo?</h2>
+								<p>Si hay una noticia que creas relevante que agreguemos, envianos los links a los distintos diarios y lo revisaremos
+									para agregarlos!</p>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label for="form_name">Nombre *</label>
+										<input id="form_name" type="text" name="name" ngModel class="form-control" placeholder="Introduzca su nombre *" required="required">
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label for="form_email">Email *</label>
+										<input id="form_email" type="email" name="email" ngModel class="form-control" placeholder="Introduzca su email *" required="required"
+											data-error="Valid email is required.">
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label for="form_message">Message *</label>
+										<textarea id="form_message" name="message" ngModel class="form-control" placeholder="Mensaje *" rows="4" required="required"
+											data-error="Please,leave us a message."></textarea>
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<input *ngIf="!enviando" type="submit" class="btn btn-success btn-send" value="Enviar">
+									<input *ngIf="enviando" disabled type="submit" class="btn btn-success btn-send" value="Enviando...">
+								</div>
+							</div>
+						</div>
+						<div *ngIf="mensajeEnviado">
+							<div class="controls">
+								<div class="row contact-title">
+									<h2>Tu mensaje ha sido enviado!</h2>
+									<p>Muchas gracias por comunicarte.</p>
+								</div>
+							</div>
+
+						</div>
+					</form>
+
+
+
+				</div>
+				<!--/#site-content-->
+			</div>
+		</div>
+	</div>
+	<!--/.section-->
 </div>
 <!--/.container-->

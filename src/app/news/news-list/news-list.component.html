@@ -9,7 +9,9 @@
 
 					</div>
 					<div class="section">
+						<p *ngIf="gridReady && newsList.length == 0" style="text-align: center;">No hay noticias que mostrar para esta categoría </p>
 						<app-loader *ngIf="!gridReady"></app-loader>
+
 
 						<div class="row masonry-grid " masonry [options]="options" [useImagesLoaded]="true" (layoutComplete)="layoutReady()" [ngClass]="{ show : gridReady }">
 
