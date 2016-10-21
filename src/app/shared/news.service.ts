@@ -11,7 +11,7 @@ import 'rxjs/Rx';
 export class NewsService {
 
   fetchedNews: News[];
-  baseUrl: string = "http://172.99.65.178:8080";
+  baseUrl: string = "http://api.newspark.com.ar:8080";
 
   constructor(private http: Http, private jsonp : Jsonp) { }
 
@@ -30,6 +30,10 @@ export class NewsService {
     params.set('category', category);
     return this.http.get( this.baseUrl + '/news' + '?category=' + category)
       .map((data) => data.json());
+  }
+
+  sendContact(info : { message: string, email: string, name: string }) {
+    return this.http.post(this.baseUrl + '/contact', info)
   }
 
   /* save: function(todo) {

@@ -17,6 +17,7 @@ import { ArticlesListComponent } from './news/news-detail/articles-list.componen
 import { CardComponent } from './news/news-detail/card.component';
 import { CardsListComponent } from './news/news-detail/cards-list.component';
 import { SourceImageComponent } from './news/news-detail/source-image.component';
+import { ContactComponent } from './news/contact/contact.component';
 import { routing, appRoutingProviders } from './app.routes';
 import { ArticleComponent } from './news/news-detail/article.component';
 import { NewsService } from './shared/news.service';
@@ -36,7 +37,11 @@ import { TimelineComponent } from './news/news-detail/timeline.component';
     CardsListComponent,
     CardComponent,
     SourceImageComponent,
-    ArticleComponent, LoaderComponent, TimelineComponent
+    ArticleComponent,
+    LoaderComponent,
+    TimelineComponent
+    ContactComponent
+
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,7 @@ import { TimelineComponent } from './news/news-detail/timeline.component';
     routing,
     MasonryModule
   ],
-  providers: [ appRoutingProviders, NewsService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [appRoutingProviders, NewsService, { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

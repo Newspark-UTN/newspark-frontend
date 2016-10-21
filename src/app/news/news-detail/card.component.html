@@ -1,8 +1,8 @@
 <div class="card row" [ngClass]="{opened: opened, closed: !opened}">
   <div class="card-content" (click)="clickCard()">
     <div class="entry-header row">
-      <app-source-image class="col-xs-12 col-md-3" [source]="article?.source"></app-source-image>
-      <h2 class="col-xs-12 col-md-9">
+      <app-source-image class="col-xs-12" [source]="article?.source"></app-source-image>
+      <h2 class="col-xs-12">
           {{ article?.title }}
       </h2>
     </div>
