@@ -32,7 +32,7 @@ export class NewsService {
       .map((data) => data.json());
   }
 
-  sendContact(info : { message: string, email: string, name: string }) {
+  sendContact(info : any) {
     return this.http.post(this.baseUrl + '/contact', info)
   }
 

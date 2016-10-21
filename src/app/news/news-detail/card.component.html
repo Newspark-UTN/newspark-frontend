@@ -1,4 +1,4 @@
-<div class="card row" [ngClass]="{opened: opened, closed: !opened}">
+<div class="card row paragraphs-{{ paragraphs().length }}" [ngClass]="{opened: opened, closed: !opened}">
   <div class="card-content" (click)="clickCard()">
     <div class="entry-header row">
       <app-source-image class="col-xs-12" [source]="article?.source"></app-source-image>
@@ -11,6 +11,8 @@
           class="paragraph paragraph-{{ i + 1 }}">
             {{ paragraph }}
         </p>
+
+        <a class="paragraph" target="_blank" href="{{ article?.link }}">Ver la noticia original</a>
     </div>
   </div>
   <div class="read-more" (click)="clickReadMore()">

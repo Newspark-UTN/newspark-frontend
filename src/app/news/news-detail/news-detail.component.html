@@ -13,7 +13,7 @@
                 <div class="details-news">
                   <div class="post" style="padding-top: 0;" [ngClass]="['post-category-'+ (newsItem?.category || 'default')]">
 
-                    <h1 style="text-align: center;"><span *ngFor="let concept of newsItem?.concepts">#{{ concept }} </span></h1>
+                    <h1 style="text-align: center; text-transform: none;"><span *ngFor="let concept of newsItem?.concepts">#{{ concept }} </span></h1>
 
                     <div class="entry-header">
                       <div class="row">
