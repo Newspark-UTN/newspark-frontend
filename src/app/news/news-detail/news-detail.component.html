@@ -1,71 +1,72 @@
 <div class="section add inner-add" style="margin:0;">
-  <h1> Tu Portal de Noticias Inteligente </h1>
+	<h1> Tu Portal de Noticias Inteligente </h1>
 </div>
 <div id="newsdetails" class="container">
 
-  <div class="section">
-    <div class="row">
-      <div class="col-sm-12">
-        <div id="site-content" class="site-content">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="left-content">
-                <div class="details-news">
-                  <div class="post" style="padding-top: 0;" [ngClass]="['post-category-'+ (newsItem?.category || 'default')]">
+	<div class="section">
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="site-content" class="site-content">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="left-content">
+								<div class="details-news">
+									<div class="post" style="padding-top: 0;" [ngClass]="['post-category-'+ (newsItem?.category || 'default')]">
 
-                    <h1 style="text-align: center;"><span *ngFor="let concept of newsItem?.concepts">#{{ concept }} </span></h1>
+										<h1 style="text-align: center;"><span *ngFor="let concept of newsItem?.concepts">#{{ concept }} </span></h1>
 
-                    <div class="entry-header">
-                      <div class="row">
-                        <div *ngIf="newsItem?.image" class="entry-thumbnail col-xs-12">
-                          <img alt="" style="max-height: 50vh; width: auto; margin: 0 auto;" class="img-responsive" src="{{ newsItem?.image }}">
-                        </div>
-                      </div>
+										<div class="entry-header">
+											<div class="row">
+												<div *ngIf="newsItem?.image" class="entry-thumbnail col-xs-12">
+													<img alt="" style="max-height: 50vh; width: auto; margin: 0 auto;" class="img-responsive" src="{{ newsItem?.image }}">
+												</div>
+											</div>
 
-                    </div>
-                    <div class="container entry-meta">
-                      <div class="col-xs-12 col-sm-6" style="min-height: 37px; line-height: 32px;">
-                        <ul class="list-inline" style="text-align: right;">
-                          <li class="publish-date"><a><i class="fa fa-clock-o"></i> Nov 15, 2016 </a></li>
-                          <li class="views"><a><i class="fa fa-eye"></i> {{newsItem?.viewsCount }} visitas</a></li>
-                          <li class="loves"><a><i class="fa fa-newspaper-o"></i> {{ newsItem?.articles.length }} artículos</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-xs-12 col-sm-6" style="">
-                        <div class="addthis_inline_share_toolbox"></div>
-                      </div>
-                    </div>
+										</div>
+										<div class="container entry-meta">
+											<div class="col-xs-12 col-sm-6" style="min-height: 37px; line-height: 32px;">
+												<ul class="list-inline" style="text-align: right;">
+													<li class="publish-date"><a><i class="fa fa-clock-o"></i> {{ getLastDate() |  date: 'd MMM , y' }} </a></li>
+													<li class="views"><a><i class="fa fa-eye"></i> {{newsItem?.viewsCount }} visitas</a></li>
+													<li class="loves"><a><i class="fa fa-newspaper-o"></i> {{ newsItem?.articles.length }} artículos</a></li>
+												</ul>
+											</div>
+											<div class="col-xs-12 col-sm-6" style="">
+												<div class="addthis_inline_share_toolbox"></div>
+											</div>
+										</div>
 
-                    <div class="catagory">
-                      <span>{{newsItem?.category}}</span>
-                    </div>
-                    <div class="post-content">
-                      <!-- <app-articles-list [newsItem]="newsItem"></app-articles-list> -->
-                      <app-cards-list [newsItem]="newsItem"></app-cards-list>
+										<div class="catagory">
+											<span>{{newsItem?.category}}</span>
+										</div>
+										<div class="post-content">
+											<!-- <app-articles-list [newsItem]="newsItem"></app-articles-list> -->
+											<!--<app-cards-list [newsItem]="newsItem"></app-cards-list>-->
+											<app-timeline [newsItem]="newsItem"></app-timeline>
 
-                      <div class="row" style="margin-bottom:25px;">
-                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                          <div class="addthis_inline_share_toolbox"></div>
-                      </div>
-                      <div class="row">
-                        <div id="disqus_thread"></div>
-                          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                      </div>
+											<div class="row" style="margin-bottom:25px;">
+												<!-- Go to www.addthis.com/dashboard to customize your tools -->
+												<div class="addthis_inline_share_toolbox"></div>
+											</div>
+											<div class="row">
+												<div id="disqus_thread"></div>
+												<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+											</div>
 
-                    </div>
-                  </div>
-                  <!--/post-->
-                </div>
-                <!--/.section-->
-              </div>
-              <!--/.left-content-->
-            </div>
-          </div>
-        </div>
-        <!--/#site-content-->
-      </div>
-    </div>
-  </div>
-  <!--/.section-->
+										</div>
+									</div>
+									<!--/post-->
+								</div>
+								<!--/.section-->
+							</div>
+							<!--/.left-content-->
+						</div>
+					</div>
+				</div>
+				<!--/#site-content-->
+			</div>
+		</div>
+	</div>
+	<!--/.section-->
 </div>
 <!--/.container-->

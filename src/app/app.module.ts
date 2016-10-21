@@ -21,6 +21,7 @@ import { routing, appRoutingProviders } from './app.routes';
 import { ArticleComponent } from './news/news-detail/article.component';
 import { NewsService } from './shared/news.service';
 import { LoaderComponent } from './shared/loader/loader.component';
+import { TimelineComponent } from './news/news-detail/timeline.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { LoaderComponent } from './shared/loader/loader.component';
     CardsListComponent,
     CardComponent,
     SourceImageComponent,
-    ArticleComponent, LoaderComponent
+    ArticleComponent, LoaderComponent, TimelineComponent
   ],
   imports: [
     BrowserModule,

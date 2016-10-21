@@ -9,7 +9,7 @@ import { NewsService } from '../../shared/news.service';
   templateUrl: './news-detail.component.html',
   styles: []
 })
-export class NewsDetailComponent implements OnInit, AfterViewInit{
+export class NewsDetailComponent implements OnInit, AfterViewInit {
 
   private suscription: Subscription;
   newsItem: News;
@@ -37,6 +37,13 @@ export class NewsDetailComponent implements OnInit, AfterViewInit{
     var os = d.createElement('script');
     os.src = '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57dffeff9b581af2';
     (d.head || d.body).appendChild(os);
+  }
+
+  getLastDate() {
+    if (this.newsItem)
+      return this.newsItem.articles.map((article) => article.articleDate).reduce(function (a, b) { return a > b ? a : b; });
+    else
+      return new Date();
   }
 
 }
