@@ -2290,6 +2290,10 @@ span.badge {
     cursor: pointer;
 }
 
+.post-content .card.opened:hover {
+    cursor: pointer;
+}
+
 .post-content .card.paragraphs-1 .read-more {
     display: none;
 }

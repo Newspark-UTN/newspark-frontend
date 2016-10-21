@@ -2265,8 +2265,13 @@ span.badge {
 }
 
 .post-content .card .card-content .entry-header h2 {
-	margin: 10px 0;
+	margin: 10px 0 5px;
 	text-align: left;
+}
+
+.post-content .card .card-content .entry-header span {
+	margin: 0 16px;
+	color: #666;
 }
 
 .post-content .card .card-content .paragraph {
@@ -2276,11 +2281,17 @@ span.badge {
 .post-content .card .read-more:hover {
 	color: #fff;
     background: #000;
+    cursor: pointer;
 }
 
 .post-content .card.closed:hover .read-more {
 	color: #fff;
     background: #000;
+    cursor: pointer;
+}
+
+.post-content .card.opened:hover {
+    cursor: pointer;
 }
 
 .post-content .card.paragraphs-1 .read-more {
