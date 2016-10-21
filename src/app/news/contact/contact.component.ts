@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NewsService } from '../../shared/news.service.ts';
 
 @Component({
   selector: 'app-contact',
@@ -7,10 +8,11 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
-  constructor() {
+  constructor(private newsService: NewsService) {
   }
   
-  onSubmit(form: any): void {  
-    console.log('you submitted value:', form);  
+  onSubmit(form: any): void {
+    console.log('you submitted value:', form)
+    this.newsService.sendContact(form)
   }
 }

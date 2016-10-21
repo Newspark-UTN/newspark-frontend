@@ -2211,16 +2211,18 @@ span.badge {
 }
 
 .post-content .card .card-content .entry-header img {
-	width: 200px;
 	display: block;
-	margin: 0 auto;
+	width: auto;
 }
 
 .post-content .card .card-content .entry-header h2 {
 	margin: 10px 0;
-	text-align: justify;
+	text-align: left;
 }
 
+.post-content .card .card-content .paragraph {
+	text-align: justify;
+}
 
 .post-content .card .read-more:hover {
     background: #ccc;
