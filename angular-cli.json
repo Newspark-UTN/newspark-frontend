@@ -15,9 +15,12 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "styles.css",
+        "app/preloader/preloader.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "app/preloader/preloader.ts"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

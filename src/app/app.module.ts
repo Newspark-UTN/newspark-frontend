@@ -36,8 +36,10 @@ import { LoaderComponent } from './shared/loader/loader.component';
     CardsListComponent,
     CardComponent,
     SourceImageComponent,
-    ContactComponent,
-    ArticleComponent, LoaderComponent
+    ArticleComponent,
+    LoaderComponent,
+    ContactComponent
+
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,7 @@ import { LoaderComponent } from './shared/loader/loader.component';
     routing,
     MasonryModule
   ],
-  providers: [ appRoutingProviders, NewsService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [appRoutingProviders, NewsService, { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

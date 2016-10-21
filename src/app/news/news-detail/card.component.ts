@@ -3,7 +3,9 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styles: []
+  styles: [` .read-more{
+    cursor: pointer;
+  }`]
 })
 export class CardComponent implements OnInit {
   @Input() article: any;
@@ -27,12 +29,12 @@ export class CardComponent implements OnInit {
 
   paragraphs() {
     if (this.article) {
-        return this.article.content.split('\n').filter(function (p) {
-            return p.trim().length > 0
-        })
+      return this.article.content.split('\n').filter(function (p) {
+        return p.trim().length > 0
+      })
     }
     else {
-        return [];
+      return [];
     }
   }
 
