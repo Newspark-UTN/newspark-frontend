@@ -319,7 +319,11 @@ img.mfp-img {
 	transition: all 0.3s ease-in-out;
 	margin-bottom:0;
 }
-
+@media (max-width: 768px) {
+	#navigation .container .navbar-brand {
+		margin-left:0px !important;
+	}
+}
 /*dropdown*/
 @media (max-width: 999px) {
 	.navbar-nav .open .dropdown-menu {
