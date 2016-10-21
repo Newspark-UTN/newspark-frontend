@@ -5,7 +5,11 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './card.component.html',
   styles: [` .read-more{
     cursor: pointer;
-  }`]
+  }
+  .titulo{
+    text-transform:none !important;
+  }
+  `]
 })
 export class CardComponent implements OnInit {
   @Input() article: any;

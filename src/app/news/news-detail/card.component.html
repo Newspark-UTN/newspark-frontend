@@ -1,22 +1,21 @@
 <div class="card row paragraphs-{{ paragraphs().length }}" [ngClass]="{opened: opened, closed: !opened}">
-  <div class="card-content" (click)="clickCard()">
-    <div class="entry-header row">
-      <app-source-image class="col-xs-12" [source]="article?.source"></app-source-image>
-      <h2 class="col-xs-12">
-          {{ article?.title }}
-      </h2>
-      <span>{{ article?.articleDate | date:'medium' }}</span>
-    </div>
-    <div class="entry-content">
-        <p *ngFor="let paragraph of paragraphs(); let i = index;"
-          class="paragraph paragraph-{{ i + 1 }}">
-            {{ paragraph }}
-        </p>
+	<div class="card-content" (click)="clickCard()">
+		<div class="entry-header row">
+			<app-source-image class="col-xs-12" [source]="article?.source"></app-source-image>
+			<h2 class="col-xs-12 titulo">
+				{{ article?.title }}
+			</h2>
+			<span>{{ article?.articleDate | date:'medium' }}</span>
+		</div>
+		<div class="entry-content">
+			<p *ngFor="let paragraph of paragraphs(); let i = index;" class="paragraph paragraph-{{ i + 1 }}">
+				{{ paragraph }}
+			</p>
 
-        <a class="paragraph" target="_blank" href="{{ article?.link }}">Ver la noticia original</a>
-    </div>
-  </div>
-  <div class="read-more" (click)="clickReadMore()">
-    <span>LEER {{ opened ?  'MENOS' : 'MÁS' }}</span>
-  </div>
+			<a class="paragraph" target="_blank" href="{{ article?.link }}">Ver la noticia original</a>
+		</div>
+	</div>
+	<div class="read-more" (click)="clickReadMore()">
+		<span>LEER {{ opened ?  'MENOS' : 'MÁS' }}</span>
+	</div>
 </div>
