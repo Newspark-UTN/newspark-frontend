@@ -7,6 +7,8 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @ViewChild('navbar') navbar: ElementRef;
+  @ViewChild('navbarRight') navbarRight: ElementRef;
+
   constructor() { }
 
   ngOnInit() {
@@ -14,6 +16,7 @@ export class HeaderComponent implements OnInit {
 
   closeNavbar() {
     this.navbar.nativeElement.classList.remove("in");
+    this.navbarRight.nativeElement.classList.remove("in");
   }
 
 }
