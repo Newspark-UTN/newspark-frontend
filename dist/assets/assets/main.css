@@ -29,7 +29,7 @@
 ==========================*/
 
 body{
-	font-family: 'Signika Negative', sans-serif;
+	font-family: sans-serif;
 	font-size: 16px;
 	color: #000000;
 	background-color: #f2f3f5;
@@ -319,7 +319,11 @@ img.mfp-img {
 	transition: all 0.3s ease-in-out;
 	margin-bottom:0;
 }
-
+@media (max-width: 768px) {
+	#navigation .container .navbar-brand {
+		margin-left:0px !important;
+	}
+}
 /*dropdown*/
 @media (max-width: 999px) {
 	.navbar-nav .open .dropdown-menu {
