@@ -27,7 +27,7 @@
                       <div class="col-xs-12 col-sm-6" style="min-height: 37px; line-height: 32px;">
                         <ul class="list-inline" style="text-align: right;">
                           <li class="publish-date"><a><i class="fa fa-clock-o"></i> {{ newsItem?.minDate | date }}</a></li>
-                          <li class="views"><a><i class="fa fa-eye"></i> {{newsItem?.viewsCount }} visitas</a></li>
+                          <li class="views"><a><i class="fa fa-eye"></i> {{ newsItem?.viewsCount + 1 }} visitas</a></li>
                           <li class="loves"><a><i class="fa fa-newspaper-o"></i> {{ newsItem?.articles.length }} artículos</a></li>
                         </ul>
                       </div>

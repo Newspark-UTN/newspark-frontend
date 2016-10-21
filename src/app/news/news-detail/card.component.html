@@ -5,6 +5,7 @@
       <h2 class="col-xs-12">
           {{ article?.title }}
       </h2>
+      <span>{{ article?.articleDate | date:'medium' }}</span>
     </div>
     <div class="entry-content">
         <p *ngFor="let paragraph of paragraphs(); let i = index;"

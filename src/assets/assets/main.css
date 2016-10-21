@@ -2265,8 +2265,13 @@ span.badge {
 }
 
 .post-content .card .card-content .entry-header h2 {
-	margin: 10px 0;
+	margin: 10px 0 5px;
 	text-align: left;
+}
+
+.post-content .card .card-content .entry-header span {
+	margin: 0 16px;
+	color: #666;
 }
 
 .post-content .card .card-content .paragraph {
