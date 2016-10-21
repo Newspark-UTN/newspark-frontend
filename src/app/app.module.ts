@@ -39,7 +39,7 @@ import { TimelineComponent } from './news/news-detail/timeline.component';
     SourceImageComponent,
     ArticleComponent,
     LoaderComponent,
-    TimelineComponent
+    TimelineComponent,
     ContactComponent
 
   ],
