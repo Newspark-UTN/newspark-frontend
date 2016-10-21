@@ -2276,11 +2276,13 @@ span.badge {
 .post-content .card .read-more:hover {
 	color: #fff;
     background: #000;
+    cursor: pointer;
 }
 
 .post-content .card.closed:hover .read-more {
 	color: #fff;
     background: #000;
+    cursor: pointer;
 }
 
 .post-content .card.paragraphs-1 .read-more {
