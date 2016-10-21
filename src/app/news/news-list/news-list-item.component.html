@@ -13,7 +13,7 @@
   <div class="post-content">
     <div class="entry-meta">
       <ul class="list-inline">
-        <li class="publish-date"><a><i class="fa fa-clock-o"></i> Jan 5, 2016 </a></li>
+        <li class="publish-date"><a><i class="fa fa-clock-o"></i> {{ newsItem?.minDate | date }}</a></li>
         <li class="views"><a><i class="fa fa-eye"></i>{{ newsItem?.viewsCount }}</a></li>
         <li class="loves"><a><i class="fa fa-newspaper-o"></i>{{ newsItem?.articles.length }}</a></li>
       </ul>

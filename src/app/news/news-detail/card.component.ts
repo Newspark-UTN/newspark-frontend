@@ -10,9 +10,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardComponent implements OnInit {
   @Input() article: any;
   @Input() opened: Boolean = false;
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+    this.opened = this.paragraphs().length === 1
   }
 
   clickReadMore() {

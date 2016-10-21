@@ -2112,6 +2112,14 @@ span.badge {
 	background-color: #bf1e2e;
 }
 
+.post-category-internacionales.post .post-content .card .read-more:hover {
+    background: #bf1e2e;
+}
+
+.post-category-internacionales.post .post-content .card.closed:hover .read-more {
+    background: #bf1e2e;
+}
+
 /* Economia */
 .post-category-economia.post .catagory {
 	border-color: #1a77bc;
@@ -2123,6 +2131,14 @@ span.badge {
 
 #mainmenu li.category-economia:hover{
 	background-color: #1a77bc;
+}
+
+.post-category-economia.post .post-content .card .read-more:hover {
+    background: #1a77bc;
+}
+
+.post-category-economia.post .post-content .card.closed:hover .read-more {
+    background: #1a77bc;
 }
 
 /* Politica */
@@ -2138,6 +2154,14 @@ span.badge {
 	background-color: #f0712c;
 }
 
+.post-category-politica.post .post-content .card .read-more:hover {
+    background: #f0712c;
+}
+
+.post-category-politica.post .post-content .card.closed:hover .read-more {
+    background: #f0712c;
+}
+
 /* Sociedad */
 .post-category-sociedad.post .catagory {
 	border-color: #fcb040;
@@ -2150,6 +2174,15 @@ span.badge {
 #mainmenu li.category-sociedad:hover{
 	background-color: #fcb040;
 }
+
+.post-category-sociedad.post .post-content .card .read-more:hover {
+    background: #fcb040;
+}
+
+.post-category-sociedad.post .post-content .card.closed:hover .read-more {
+    background: #fcb040;
+}
+
 /* Espectaculos */
 .post-category-espectaculos.post .catagory {
 	border-color: #912690;
@@ -2161,6 +2194,14 @@ span.badge {
 
 #mainmenu li.category-espectaculos:hover{
 	background-color: #912690;
+}
+
+.post-category-espectaculos.post .post-content .card .read-more:hover {
+    background: #912690;
+}
+
+.post-category-espectaculos.post .post-content .card.closed:hover .read-more {
+    background: #912690;
 }
 
 /* Deportes */
@@ -2176,6 +2217,14 @@ span.badge {
 	background-color: #45a823;
 }
 
+.post-category-deportes.post .post-content .card .read-more:hover {
+    background: #45a823;
+}
+
+.post-category-deportes.post .post-content .card.closed:hover .read-more {
+    background: #45a823;
+}
+
 /*==============================
 ===== Cards Customization ======
 ================================*/
@@ -2184,10 +2233,6 @@ span.badge {
     margin: 25px 20px;
     border: 1px solid #e1e1e1;
     color: #000;
-}
-
-.post-content .card:hover {
-    border-color: #ccc;
 }
 
 .post-content .card .card-content {
@@ -2199,11 +2244,15 @@ span.badge {
 }
 
 .post-content .card .read-more {
-    border-top: 1px solid;
     border-color: inherit;
     background: #e1e1e1;
     text-align: center;
     padding: 10px 0 5px;
+
+    -webkit-transition: 200ms;
+	-moz-transition: 200ms;
+	-o-transition: 200ms;
+	transition: 200ms;
 }
 
 .post-content .card .card-content .entry-header {
@@ -2225,11 +2274,23 @@ span.badge {
 }
 
 .post-content .card .read-more:hover {
-    background: #ccc;
+	color: #fff;
+    background: #000;
+    cursor: pointer;
 }
 
 .post-content .card.closed:hover .read-more {
-    background: #ccc;
+	color: #fff;
+    background: #000;
+    cursor: pointer;
+}
+
+.post-content .card.paragraphs-1 .read-more {
+    display: none;
+}
+
+.post-content .card .card-content a.paragraph:hover {
+	color: #000;
 }
 
 .post-content .card.closed .card-content .paragraph {

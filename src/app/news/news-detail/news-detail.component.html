@@ -13,7 +13,8 @@
 								<div class="details-news">
 									<div class="post" style="padding-top: 0;" [ngClass]="['post-category-'+ (newsItem?.category || 'default')]">
 
-										<h1 style="text-align: center;"><span *ngFor="let concept of newsItem?.concepts">#{{ concept }} </span></h1>
+
+										<h1 style="text-align: center; text-transform: none;"><span *ngFor="let concept of newsItem?.concepts">#{{ concept }} </span></h1>
 
 										<div class="entry-header">
 											<div class="row">
@@ -22,11 +23,12 @@
 												</div>
 											</div>
 
+
 										</div>
 										<div class="container entry-meta">
 											<div class="col-xs-12 col-sm-6" style="min-height: 37px; line-height: 32px;">
 												<ul class="list-inline" style="text-align: right;">
-													<li class="publish-date"><a><i class="fa fa-clock-o"></i> {{ getLastDate() |  date: 'd MMM , y' }} </a></li>
+													<li class="publish-date"><a><i class="fa fa-clock-o"></i> {{ newsItem?.minDate | date }}</a></li>
 													<li class="views"><a><i class="fa fa-eye"></i> {{newsItem?.viewsCount }} visitas</a></li>
 													<li class="loves"><a><i class="fa fa-newspaper-o"></i> {{ newsItem?.articles.length }} artículos</a></li>
 												</ul>
