@@ -2290,7 +2290,7 @@ span.badge {
     cursor: pointer;
 }
 
-.post-content .card.opened:hover {
+.post-content .card.closed:hover {
     cursor: pointer;
 }
 
